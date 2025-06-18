@@ -1,0 +1,236 @@
+.service-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 140, 66, 0.1);
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent, rgba(255, 140, 66, 0.05), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-color: rgba(255, 140, 66, 0.3);
+}
+
+.service-icon {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.service-icon span {
+  font-size: 3rem;
+  display: inline-block;
+  padding: 1rem;
+  background: rgba(255, 140, 66, 0.1);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon span {
+  transform: scale(1.1);
+  background: rgba(255, 140, 66, 0.2);
+}
+
+.service-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-content h3 {
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  color: #2D5016;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.service-description {
+  font-family: 'Urbanist', sans-serif;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.service-features {
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.service-features h4 {
+  font-family: 'Poppins', sans-serif;
+  color: #2D5016;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.service-features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-features li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-family: 'Urbanist', sans-serif;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.service-features li i {
+  color: #FF8C42;
+  margin-right: 0.8rem;
+  font-size: 0.8rem;
+}
+
+.service-price {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(45, 80, 22, 0.05);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 140, 66, 0.2);
+}
+
+.price-label {
+  font-family: 'Urbanist', sans-serif;
+  color: #666;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.price-value {
+  font-family: 'Poppins', sans-serif;
+  color: #FF8C42;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.service-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.book-btn,
+.info-btn {
+  flex: 1;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.book-btn {
+  background: linear-gradient(135deg, #2D5016 0%, #1B3409 100%);
+  color: #F5F5DC;
+  border-color: rgba(255, 140, 66, 0.3);
+}
+
+.book-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(45, 80, 22, 0.3);
+  background: linear-gradient(135deg, #1B3409 0%, #2D5016 100%);
+}
+
+.info-btn {
+  background: transparent;
+  color: #FF8C42;
+  border-color: #FF8C42;
+}
+
+.info-btn:hover {
+  background: #FF8C42;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 140, 66, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-card {
+    padding: 1.5rem;
+  }
+  
+  .service-icon span {
+    font-size: 2.5rem;
+    padding: 0.8rem;
+  }
+  
+  .service-content h3 {
+    font-size: 1.3rem;
+  }
+  
+  .service-actions {
+    flex-direction: column;
+  }
+  
+  .book-btn,
+  .info-btn {
+    flex: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-card {
+    padding: 1rem;
+  }
+  
+  .service-icon span {
+    font-size: 2rem;
+    padding: 0.6rem;
+  }
+  
+  .service-content h3 {
+    font-size: 1.2rem;
+  }
+  
+  .service-description {
+    font-size: 0.9rem;
+  }
+  
+  .service-features li {
+    font-size: 0.85rem;
+  }
+  
+  .book-btn,
+  .info-btn {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.85rem;
+  }
+}

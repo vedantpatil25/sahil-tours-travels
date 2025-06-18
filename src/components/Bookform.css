@@ -1,0 +1,224 @@
+.form {
+  background: #FFFFFF;
+  box-shadow: 0 20px 40px rgba(45, 80, 22, 0.15);
+  text-align: left;
+  width: 50%;
+  max-width: 500px;
+  min-width: 300px;
+  padding: 3rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 140, 66, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #FF8C42, #DAA520, #FF6B35);
+}
+
+#email {
+  text-transform: lowercase;
+}
+
+.inputbox {
+  margin: 1.5rem 0;
+}
+
+.inputbox h3 {
+  text-transform: capitalize;
+  font-family: "Urbanist", sans-serif;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+  color: #2D5016;
+  font-weight: 600;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.inputbox input,
+.inputbox select {
+  width: 100%;
+  font-family: "Urbanist", sans-serif;
+  letter-spacing: 0.5px;
+  padding: 0.8rem;
+  border: 2px solid rgba(139, 69, 19, 0.3);
+  border-radius: 8px;
+  text-transform: capitalize;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #FFFFFF;
+  color: #2D2D2D;
+}
+
+.inputbox input:focus,
+.inputbox select:focus {
+  outline: none;
+  border-color: #FF8C42;
+  box-shadow: 0 0 10px rgba(255, 140, 66, 0.3);
+  transform: translateY(-2px);
+}
+
+.inputbox input::placeholder {
+  color: #666666;
+  opacity: 0.7;
+}
+
+.sub-btn {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.subbtn {
+  background: linear-gradient(135deg, #FF8C42 0%, #FF6B35 100%);
+  color: #FFFFFF;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  padding: 1.2rem 2.5rem;
+  transition: all 0.4s ease;
+  text-transform: uppercase;
+  box-shadow: 0 8px 25px rgba(255, 140, 66, 0.4);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 200px;
+}
+
+.subbtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.subbtn:hover::before {
+  left: 100%;
+}
+
+.subbtn:hover {
+  background: linear-gradient(135deg, #2D5016 0%, #1B3409 100%);
+  color: #F5F5DC;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(45, 80, 22, 0.5);
+}
+
+.subbtn:active {
+  transform: translateY(-1px);
+}
+
+/* Responsive Design */
+
+/* Large tablets */
+@media screen and (max-width: 1024px) {
+  .form {
+    width: 45%;
+    padding: 2.5rem;
+  }
+  
+  .inputbox {
+    margin: 1.2rem 0;
+  }
+  
+  .inputbox input,
+  .inputbox select {
+    padding: 0.7rem;
+  }
+}
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+  .form {
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+    border-radius: 15px;
+  }
+  
+  .inputbox {
+    margin: 1rem 0;
+  }
+  
+  .inputbox h3 {
+    margin-bottom: 0.4rem;
+  }
+  
+  .inputbox input,
+  .inputbox select {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+  
+  .subbtn {
+    padding: 1rem 2rem;
+    max-width: 250px;
+  }
+}
+
+/* Mobile phones */
+@media screen and (max-width: 480px) {
+  .form {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+  
+  .inputbox {
+    margin: 0.8rem 0;
+  }
+  
+  .inputbox h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .inputbox input,
+  .inputbox select {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+    border-radius: 6px;
+  }
+  
+  .sub-btn {
+    margin-top: 1.5rem;
+  }
+  
+  .subbtn {
+    padding: 0.9rem 1.8rem;
+    font-size: 0.9rem;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 320px) {
+  .form {
+    padding: 1rem;
+  }
+  
+  .inputbox input,
+  .inputbox select {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+  }
+  
+  .subbtn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.85rem;
+  }
+}

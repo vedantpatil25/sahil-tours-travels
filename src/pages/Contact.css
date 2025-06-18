@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main contact container */
+/* .contact-container {
+  margin-top: 10vh;
+} */
+.contact {
+  background: linear-gradient(135deg, #f5f5dc 0%, #f0f0f0 100%);
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  margin-top: 0; /* Remove any top margin that might cause spacing issues */
+}
+
+#line {
+  width: 90%;
+  margin: 2rem auto;
+  background: linear-gradient(90deg, transparent, #ff8c42, transparent);
+  height: 2px;
+  border: none;
+  box-shadow: 0 0 10px rgba(255, 140, 66, 0.3);
+}
+
+.contact h2 {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 300;
+  word-spacing: 5px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-family: 'Poppins', sans-serif;
+  color: #2d5016;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.row {
+  display: flex;
+  padding: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.img {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+
+.img img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(45, 80, 22, 0.2);
+  transition: all 0.3s ease;
+}
+
+.img img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(45, 80, 22, 0.3);
+}
+
+form {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  min-width: 300px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(45, 80, 22, 0.15);
+  border: 2px solid rgba(255, 140, 66, 0.2);
+}
+
+form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #ff8c42, #daa520, #ff6b35);
+  border-radius: 20px 20px 0 0;
+}
+
+form input,
+form textarea {
+  padding: 1.2rem;
+  font-size: 1rem;
+  border: 2px solid rgba(139, 69, 19, 0.3);
+  border-radius: 10px;
+  font-family: 'Urbanist', sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.8);
+  color: #2d2d2d;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #ff8c42;
+  box-shadow: 0 0 15px rgba(255, 140, 66, 0.3);
+  transform: translateY(-2px);
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #666666;
+  opacity: 0.7;
+}
+
+form button {
+  background: linear-gradient(135deg, #ff8c42 0%, #ff6b35 100%);
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.4s ease;
+  border: none;
+  padding: 1.2rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 8px 25px rgba(255, 140, 66, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+form button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+form button:hover::before {
+  left: 100%;
+}
+
+form button:hover {
+  background: linear-gradient(135deg, #2d5016 0%, #1b3409 100%);
+  color: #f5f5dc;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(45, 80, 22, 0.5);
+}
+
+form button:active {
+  transform: translateY(-1px);
+}
+
+.callbox {
+  box-shadow: 0 15px 35px rgba(45, 80, 22, 0.2);
+  background: rgba(245, 245, 220, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  color: #2d2d2d;
+  cursor: pointer;
+  width: 300px;
+  max-width: 90%;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-family: 'Urbanist', sans-serif;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 140, 66, 0.3);
+}
+
+.callbox i {
+  color: #ff8c42;
+  font-size: 1.5rem;
+  filter: drop-shadow(0 0 5px rgba(255, 140, 66, 0.4));
+}
+
+.callbox:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 140, 66, 0.1);
+  box-shadow: 0 20px 40px rgba(45, 80, 22, 0.3);
+  border-color: rgba(255, 140, 66, 0.5);
+}
+
+.callbox:hover i {
+  color: #daa520;
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .contact {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .row {
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+
+  form {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 1rem 0.25rem;
+  }
+
+  .row {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 2rem;
+  }
+
+  .img,
+  form {
+    width: 100%;
+    flex: 1 1 100%;
+    min-width: unset;
+  }
+
+  .contact h2 {
+    padding: 1.5rem 0.5rem;
+  }
+
+  form {
+    padding: 2rem 1.5rem;
+    border-radius: 15px;
+  }
+
+  .callbox {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 0.5rem 0.125rem;
+  }
+
+  .contact h2 {
+    padding: 1rem 0.25rem;
+    letter-spacing: 1px;
+  }
+
+  .row {
+    padding: 0.5rem;
+  }
+
+  form {
+    padding: 1.5rem 1rem;
+    gap: 1rem;
+  }
+
+  form input,
+  form textarea {
+    font-size: 0.9rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  form button {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 25px;
+  }
+
+  .callbox {
+    font-size: 0.95rem;
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  .callbox i {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 320px) {
+  form {
+    padding: 1rem 0.8rem;
+  }
+
+  form input,
+  form textarea {
+    padding: 0.8rem;
+  }
+
+  .callbox {
+    padding: 0.8rem;
+  }
+}

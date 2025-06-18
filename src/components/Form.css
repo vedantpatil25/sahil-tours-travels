@@ -1,0 +1,366 @@
+.footer {
+  background: linear-gradient(135deg, #1B3409 0%, #2D5016 100%);
+  margin-top: 2rem;
+  min-height: 50vh;
+  height: auto;
+  color: #F5F5DC;
+  font-family: "Urbanist", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="jungle" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="rgba(255,140,66,0.05)"/><circle cx="5" cy="35" r="0.5" fill="rgba(218,165,32,0.03)"/></pattern></defs><rect width="100" height="100" fill="url(%23jungle)"/></svg>');
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.fbox {
+  height: auto;
+  margin: 0.5rem 0;
+  display: flex;
+  gap: 5%;
+  justify-content: center;
+  padding: 2rem 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.footer hr {
+  width: 90%;
+  margin: auto;
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #FF8C42, #DAA520, #FF8C42, transparent);
+  box-shadow: 0 0 10px rgba(255, 140, 66, 0.3);
+}
+
+.aboutus {
+  padding: 1rem;
+  width: 15%;
+  background: rgba(255, 140, 66, 0.05);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 140, 66, 0.1);
+  transition: all 0.3s ease;
+}
+
+.aboutus:hover {
+  background: rgba(255, 140, 66, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.branch,
+.quicklinks,
+.follow {
+  width: 20%;
+  padding: 1rem;
+  background: rgba(255, 140, 66, 0.05);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 140, 66, 0.1);
+  transition: all 0.3s ease;
+}
+
+.branch:hover,
+.quicklinks:hover,
+.follow:hover {
+  background: rgba(255, 140, 66, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.aboutus h2,
+.branch h2,
+.quicklinks h2,
+.follow h2 {
+  margin: 1rem 0;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #F5F5DC;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+
+.aboutus h2::after,
+.branch h2::after,
+.quicklinks h2::after,
+.follow h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(90deg, #FF8C42, #DAA520);
+  border-radius: 1px;
+}
+
+.aboutus p,
+.branch p {
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+  color: #F5F5DC;
+  opacity: 0.9;
+}
+
+.quicklinks ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.quicklinks ul li {
+  margin: 0.8rem 0;
+}
+
+.quicklinks ul li a {
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #F5F5DC;
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.quicklinks ul li a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 140, 66, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.quicklinks ul li a:hover::before {
+  left: 100%;
+}
+
+.quicklinks ul li a:hover {
+  background: linear-gradient(135deg, #FF8C42, #DAA520);
+  color: #FFFFFF;
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(255, 140, 66, 0.4);
+}
+
+.fa-map-marker-alt {
+  color: #FF8C42;
+}
+
+#fdiff {
+  color: #FF8C42;
+  text-shadow: 0 0 10px rgba(255, 140, 66, 0.5);
+  font-size: 1.2em;
+}
+
+.follow ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.follow ul li {
+  margin: 1rem 0;
+}
+
+.follow ul li a {
+  padding: 0.8rem;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #F5F5DC;
+  transition: all 0.3s ease;
+  display: inline-block;
+  font-size: 1.2rem;
+  border: 2px solid transparent;
+}
+
+#twitter:hover {
+  background-color: #00acee;
+  color: #FFFFFF;
+  transform: scale(1.1);
+  box-shadow: 0 5px 20px rgba(0, 172, 238, 0.4);
+  border-color: #00acee;
+}
+
+#facebook:hover {
+  background-color: #4267b2;
+  color: #FFFFFF;
+  transform: scale(1.1);
+  box-shadow: 0 5px 20px rgba(66, 103, 178, 0.4);
+  border-color: #4267b2;
+}
+
+#instagram:hover {
+  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  color: #FFFFFF;
+  transform: scale(1.1);
+  box-shadow: 0 5px 20px rgba(214, 41, 118, 0.4);
+}
+
+#map {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 140, 66, 0.3);
+  transition: all 0.3s ease;
+}
+
+#map:hover {
+  border-color: #FF8C42;
+  box-shadow: 0 5px 15px rgba(255, 140, 66, 0.3);
+}
+
+.copy {
+  font-size: 0.8rem;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(27, 52, 9, 0.5);
+  position: relative;
+  z-index: 2;
+}
+
+.copy h2 {
+  color: #F5F5DC;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: center;
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 1024px) {
+  .fbox {
+    gap: 3%;
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .aboutus,
+  .branch,
+  .quicklinks,
+  .follow {
+    padding: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .fbox {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .aboutus,
+  .branch,
+  .quicklinks,
+  .follow {
+    width: 100%;
+    text-align: left;
+    padding: 1.5rem;
+  }
+  
+  .follow ul {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+  
+  .aboutus h2,
+  .branch h2,
+  .quicklinks h2,
+  .follow h2 {
+    font-size: 1.3rem;
+  }
+  
+  .aboutus p,
+  .branch p {
+    font-size: 1rem;
+  }
+  
+  .quicklinks ul li a {
+    font-size: 1rem;
+  }
+  
+  .follow ul li a {
+    font-size: 1.1rem;
+  }
+  
+  .footer hr {
+    width: 100%;
+  }
+  
+  #map {
+    height: 180px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .fbox {
+    padding: 0.5rem;
+    gap: 1rem;
+  }
+  
+  .aboutus,
+  .branch,
+  .quicklinks,
+  .follow {
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  
+  .aboutus h2,
+  .branch h2,
+  .quicklinks h2,
+  .follow h2 {
+    font-size: 1.2rem;
+    margin: 0.8rem 0;
+  }
+  
+  .copy {
+    padding: 1rem;
+  }
+  
+  .copy h2 {
+    font-size: 0.7rem;
+  }
+  
+  #map {
+    height: 150px;
+  }
+  
+  .follow ul {
+    gap: 0.5rem;
+  }
+  
+  .follow ul li a {
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .aboutus,
+  .branch,
+  .quicklinks,
+  .follow {
+    padding: 0.8rem;
+  }
+  
+  .copy h2 {
+    font-size: 0.65rem;
+  }
+  
+  #map {
+    height: 120px;
+  }
+}

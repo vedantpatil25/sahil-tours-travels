@@ -1,0 +1,463 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  margin-top: 8vh;
+}
+
+.home {
+  height: 92vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.home .content {
+  position: absolute;
+  top: 20%;
+  background: rgba(245, 245, 220, 0.776);
+  backdrop-filter: blur(2px);
+  padding: 2.5rem;
+  box-shadow: 0 20px 40px rgba(45, 80, 22, 0.3);
+  text-align: center;
+  max-width: 90%;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 140, 66, 0.4);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1.2s ease 0.5s forwards;
+  z-index: 5;
+}
+
+.home .content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #FF8C42, #DAA520, #FF6B35);
+  border-radius: 20px 20px 0 0;
+}
+
+.home .content h3 {
+  color: #2D5016;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-weight: 300;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.home .content p {
+  color: #8B4513;
+  font-family: 'Urbanist', sans-serif;
+  letter-spacing: 1px;
+  margin: 1.5rem 0;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+.home .video-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.home .video-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.1),
+    transparent,
+    rgba(0, 0, 0, 0.1)
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.home .video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  filter: brightness(0.85) contrast(1.1) saturate(1.1);
+}
+
+.info {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  background: rgba(245, 245, 220, 0.95);
+  backdrop-filter: blur(2px);
+  width: 100%;
+  padding: 1.5rem;
+  color: #2D2D2D;
+  justify-content: space-around;
+  font-family: 'Urbanist', sans-serif;
+  border-top: 2px solid rgba(255, 140, 66, 0.4);
+}
+
+.info .mail,
+.info .call,
+.info .socialm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 30%;
+  margin: 0.5rem;
+  gap: 0.8rem;
+  padding: 0.8rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 140, 66, 0.3);
+}
+
+.info .mail::before,
+.info .call::before,
+.info .socialm::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 140, 66, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.info .mail:hover::before,
+.info .call:hover::before,
+.info .socialm:hover::before {
+  left: 100%;
+}
+
+.info .mail:hover,
+.info .call:hover,
+.info .socialm:hover {
+  background: rgba(255, 140, 66, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 140, 66, 0.3);
+  border-color: rgba(255, 140, 66, 0.6);
+}
+
+.info p,
+.info a {
+  color: #2D2D2D;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.info a:hover,
+.info p:hover {
+  color: #FF8C42;
+  transform: scale(1.05);
+}
+
+#ficons {
+  color: #FF8C42;
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 5px rgba(255, 140, 66, 0.4));
+}
+
+.info .mail:hover #ficons,
+.info .call:hover #ficons,
+.info .socialm:hover #ficons {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 10px rgba(255, 140, 66, 0.6));
+  color: #DAA520;
+}
+
+.btn {
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1.5rem;
+  position: relative;
+  z-index: 10;
+}
+
+.exp-btn {
+  margin: 1rem 0;
+  background: linear-gradient(135deg, #FF8C42 0%, #FF6B35 100%);
+  color: #FFFFFF;
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  padding: 1.2rem 2.5rem;
+  transition: all 0.4s ease;
+  text-transform: uppercase;
+  box-shadow: 0 6px 20px rgba(255, 140, 66, 0.4);
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.exp-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.exp-btn:hover::before {
+  left: 100%;
+}
+
+.exp-btn:hover {
+  background: linear-gradient(135deg, #2D5016 0%, #1B3409 100%);
+  color: #F5F5DC;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(45, 80, 22, 0.5);
+}
+
+.exp-btn:active {
+  transform: translateY(-1px);
+}
+
+#diff {
+  color: #FF8C42;
+  display: inline-block;
+  animation: tigerGlow 3s ease-in-out infinite alternate;
+}
+
+#line {
+  width: 90%;
+  margin: 3rem auto;
+  background: linear-gradient(90deg, transparent, #FF8C42, transparent);
+  height: 2px;
+  border: none;
+  box-shadow: 0 0 10px rgba(255, 140, 66, 0.3);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes tigerGlow {
+  from {
+    color: #FF8C42;
+  }
+  to {
+    color: #DAA520;
+  }
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+  .home .content {
+    padding: 2rem;
+    max-width: 95%;
+  }
+
+  .info {
+    padding: 1.2rem;
+  }
+
+  .info .mail,
+  .info .call,
+  .info .socialm {
+    margin: 0.4rem;
+    padding: 0.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home .content {
+    top: 15%;
+    padding: 1.5rem; /* Reduced from 1.8rem */
+    border-radius: 15px;
+  }
+
+  .home .content h3 {
+    line-height: 1.2;
+    letter-spacing: 1px;
+    margin-bottom: 1rem; /* Reduced from 1.5rem */
+  }
+
+  .home .content p {
+    letter-spacing: 0.5px;
+    margin: 0.8rem 0 1rem 0; /* Reduced margins */
+  }
+
+  .btn {
+    margin-top: 1rem; /* Reduced from 1.5rem */
+  }
+
+  .info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.2rem 0.8rem;
+  }
+
+  .info .mail,
+  .info .call,
+  .info .socialm {
+    flex: 1 1 100%;
+    margin: 0.4rem 0;
+    width: 100%;
+    max-width: 400px;
+    justify-content: center;
+  }
+
+  .info p,
+  .info a {
+    font-size: 0.9rem;
+  }
+
+  .exp-btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+
+  #ficons {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home .content {
+    padding: 1rem; /* Reduced from 1.5rem */
+    top: 10%;
+    max-width: 95%;
+  }
+
+  .home .content h3 {
+    letter-spacing: 0.5px;
+    margin-bottom: 0.8rem; /* Reduced margin */
+  }
+
+  .home .content p {
+    letter-spacing: 0.3px;
+    margin: 0.5rem 0 0.8rem 0; /* Reduced margins */
+  }
+
+  .btn {
+    margin-top: 0.8rem; /* Reduced margin */
+  }
+
+  .exp-btn {
+    font-size: 0.9rem; /* Reduced from 0.95rem */
+    padding: 0.8rem 1.5rem; /* Reduced padding */
+    border-radius: 30px;
+    margin: 0.5rem 0; /* Reduced margin */
+  }
+
+  #ficons {
+    font-size: 1.1rem;
+  }
+
+  .info {
+    padding: 1rem 0.5rem;
+  }
+
+  .info .mail,
+  .info .call,
+  .info .socialm {
+    padding: 0.8rem;
+    margin: 0.3rem 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .home .content {
+    padding: 0.8rem; /* Reduced from 1rem */
+    max-width: 98%;
+    top: 8%;
+  }
+
+  .home .content h3 {
+    margin-bottom: 0.6rem; /* Further reduced */
+  }
+
+  .home .content p {
+    margin: 0.4rem 0 0.6rem 0; /* Further reduced */
+  }
+
+  .btn {
+    margin-top: 0.6rem; /* Further reduced */
+  }
+
+  .exp-btn {
+    padding: 0.7rem 1.2rem; /* Reduced padding */
+    font-size: 0.85rem; /* Reduced font size */
+    margin: 0.4rem 0; /* Reduced margin */
+  }
+}
+
+/* Fix for mobile devices with small viewport height */
+@media screen and (max-height: 600px) {
+  .home .content {
+    top: 5%;
+    padding: 0.8rem; /* Reduced padding for short screens */
+  }
+  
+  .home .content h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .home .content p {
+    margin: 0.3rem 0 0.5rem 0;
+  }
+  
+  .btn {
+    margin-top: 0.5rem;
+  }
+  
+  .exp-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+    margin: 0.3rem 0;
+  }
+}

@@ -1,0 +1,456 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container5 {
+  min-height: 100vh;
+  height: auto;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #F5F5DC 0%, #F0F0F0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.container5::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="leaves" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,140,66,0.05)"/><circle cx="10" cy="40" r="0.5" fill="rgba(218,165,32,0.03)"/></pattern></defs><rect width="100" height="100" fill="url(%23leaves)"/></svg>');
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.contact {
+  max-width: 1200px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 2rem 0;
+  opacity: 0;
+  animation: fadeInUp 1s ease 0.2s forwards;
+  position: relative;
+  z-index: 2;
+}
+
+.contact h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 300;
+  word-spacing: 5px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-family: "Poppins", sans-serif;
+  color: #2D5016;
+  position: relative;
+}
+
+.contact h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #FF8C42, #DAA520);
+  border-radius: 2px;
+  box-shadow: 0 2px 10px rgba(255, 140, 66, 0.3);
+}
+
+.rowlast {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.contimg {
+  flex: 1;
+  max-width: 500px;
+  min-width: 300px;
+  width: 40%;
+  position: relative;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: slideInLeft 0.8s ease 0.5s forwards;
+}
+
+.contimg::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: 20px;
+  bottom: 20px;
+  background: linear-gradient(45deg, rgba(255, 140, 66, 0.1), rgba(218, 165, 32, 0.1));
+  border-radius: 20px;
+  z-index: -1;
+  filter: blur(15px);
+}
+
+#contimg {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(45, 80, 22, 0.2);
+  transition: all 0.4s ease;
+  filter: brightness(1.05) contrast(1.1);
+}
+
+#contimg:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(45, 80, 22, 0.3);
+}
+
+.box {
+  flex: 1;
+  max-width: 500px;
+  min-width: 300px;
+  width: 30%;
+  background: #FFFFFF;
+  padding: 3rem 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(45, 80, 22, 0.15);
+  text-align: left;
+  position: relative;
+  opacity: 0;
+  transform: translateX(30px);
+  animation: slideInRight 0.8s ease 0.7s forwards;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 140, 66, 0.1);
+  overflow: hidden;
+}
+
+.box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, #FF8C42, #DAA520, #FF6B35);
+  border-radius: 20px 20px 0 0;
+}
+
+.box::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 140, 66, 0.05) 0%, transparent 70%);
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+.box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px rgba(45, 80, 22, 0.25);
+  border-color: rgba(255, 140, 66, 0.3);
+}
+
+.box h2 {
+  text-align: left;
+  margin: 1rem 0;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 400;
+  word-spacing: 5px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-family: "Poppins", sans-serif;
+  color: #2D5016;
+  position: relative;
+}
+
+.box hr {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #FF8C42, #DAA520);
+  border: none;
+  border-radius: 2px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 10px rgba(255, 140, 66, 0.3);
+}
+
+.box p {
+  color: #666666;
+  font-family: "Urbanist", sans-serif;
+  letter-spacing: 0.5px;
+  margin: 1rem 0 2rem 0;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+.btn {
+  margin-top: 1rem;
+  position: relative;
+}
+
+.cont-btn {
+  margin: 0.5rem 0;
+  background: linear-gradient(135deg, #FF8C42 0%, #FF6B35 100%);
+  color: #FFFFFF;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  padding: 1.2rem 2.5rem;
+  transition: all 0.4s ease;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(255, 140, 66, 0.4);
+}
+
+.cont-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.cont-btn:hover::before {
+  left: 100%;
+}
+
+.cont-btn:hover {
+  background: linear-gradient(135deg, #2D5016 0%, #1B3409 100%);
+  color: #F5F5DC;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(45, 80, 22, 0.5);
+}
+
+.cont-btn:active {
+  transform: translateY(-1px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Media Queries */
+
+/* Large tablets and small desktops */
+@media screen and (max-width: 1024px) {
+  .container5 {
+    padding: 1.5rem 1rem;
+  }
+  
+  .contact {
+    margin: 1.5rem auto;
+    padding: 1.5rem 0;
+  }
+  
+  .contact h1 {
+    margin-bottom: 2.5rem;
+  }
+  
+  .rowlast {
+    gap: 3rem;
+  }
+  
+  .box {
+    padding: 2.5rem 2rem;
+  }
+  
+  .cont-btn {
+    padding: 1rem 2rem;
+  }
+}
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+  .container5 {
+    padding: 1rem 0.5rem;
+    min-height: auto;
+  }
+  
+  .contact {
+    margin: 1rem auto;
+    padding: 1rem 0;
+  }
+  
+  .contact h1 {
+    margin-bottom: 2rem;
+  }
+  
+  .rowlast {
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+  }
+  
+  .contimg,
+  .box {
+    width: 100%;
+    max-width: 500px;
+    min-width: unset;
+  }
+  
+  .box {
+    padding: 2.5rem 2rem;
+    text-align: center;
+  }
+  
+  .box h2 {
+    text-align: center;
+  }
+  
+  .box hr {
+    margin: 1rem auto 1.5rem auto;
+  }
+  
+  .cont-btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* Mobile phones */
+@media screen and (max-width: 480px) {
+  .container5 {
+    padding: 0.5rem;
+  }
+  
+  .contact {
+    margin: 0.5rem auto;
+    padding: 0.5rem 0;
+  }
+  
+  .contact h1 {
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+  }
+  
+  .rowlast {
+    gap: 2rem;
+  }
+  
+  .contimg {
+    max-width: 100%;
+  }
+  
+  .contimg::before {
+    top: -15px;
+    left: -15px;
+    right: 15px;
+    bottom: 15px;
+  }
+  
+  .box {
+    padding: 2rem 1.5rem;
+    border-radius: 15px;
+    width: 90%;
+  }
+  
+  .box h2 {
+    margin-bottom: 0.8rem;
+  }
+  
+  .box hr {
+    margin-bottom: 1.2rem;
+    width: 60px;
+  }
+  
+  .box p {
+    margin-bottom: 1.5rem;
+  }
+  
+  .cont-btn {
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
+    border-radius: 25px;
+  }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 320px) {
+  .container5 {
+    padding: 0.25rem;
+  }
+  
+  .box {
+    padding: 1.5rem 1rem;
+    width: 95%;
+  }
+  
+  .cont-btn {
+    padding: 0.9rem 1.5rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Landscape orientation for mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .container5 {
+    min-height: auto;
+    padding: 1rem;
+  }
+  
+  .contact h1 {
+    margin-bottom: 1rem;
+  }
+  
+  .rowlast {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  
+  .contimg,
+  .box {
+    flex: 1;
+  }
+  
+  .box {
+    padding: 1.5rem;
+  }
+}

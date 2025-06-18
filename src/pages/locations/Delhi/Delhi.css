@@ -1,0 +1,531 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.t-container {
+  padding: 2rem;
+  min-height: 85vh;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  z-index: 1;
+  background-image: url(../../../media/delhi/delhibg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.t-container .content {
+  width: 60%;
+  max-width: 800px;
+  margin: 0 auto;
+  animation: slideup 1.2s ease;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  box-shadow: 0 8px 39px 17px rgba(0, 0, 0, 0.8);
+  text-align: left;
+  border-radius: 10px;
+}
+
+.t-container .content h2,
+.t-container .content h3 {
+  color: #fff;
+  text-shadow: 2px 2px rgb(199 200 205 / 37%);
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-transform: capitalize;
+  letter-spacing: 3px;
+  font-weight: 300;
+  font-family: "Poppins", sans-serif;
+}
+
+.t-container .content h3 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.t-container .content p {
+  color: #fff;
+  font-family: "Urbanist", sans-serif;
+  letter-spacing: 2px;
+  font-weight: 200;
+  text-shadow: 1px 1px rgb(199 200 205 / 37%);
+  margin: 1rem 0;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+}
+
+.chk-btn {
+  margin: 1rem 0;
+  background-color: #92e3a9;
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.1rem;
+  border: none;
+  font-weight: 400;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  padding: 1rem;
+  width: 100%;
+  max-width: 200px;
+}
+
+.chk-btn:hover {
+  background-color: #37474f;
+  font-weight: 300;
+  color: #fff;
+  transition: 0.2s ease;
+}
+
+#line {
+  width: 90%;
+  margin: auto;
+  border: 1px solid hsl(225, 10%, 45%);
+}
+
+.t-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.t-info h2 {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 1rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 300;
+  word-spacing: 5px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-family: "Poppins", sans-serif;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 1.5rem;
+  box-shadow: 0 0.2rem 0.6rem 0.3rem rgba(0, 0, 0, 0.2);
+  text-align: left;
+  border-radius: 8px;
+}
+
+.t-info .t-row {
+  padding: 2rem;
+  margin: 3rem auto;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.infobox {
+  flex: 1;
+  max-width: 500px;
+  min-width: 300px;
+}
+
+.infobox .box .title h2 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  text-align: left;
+  font-weight: 400;
+}
+
+.infobox .box .title p {
+  color: #0f0f0f;
+  font-family: "Urbanist", sans-serif;
+  letter-spacing: 2px;
+  font-weight: 400;
+  text-shadow: 1px 1px rgb(199 200 205 / 37%);
+  margin: 1rem 0;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  line-height: 1.6;
+}
+
+.images {
+  flex: 1;
+  display: flex;
+  gap: 1rem;
+  max-width: 500px;
+  min-width: 300px;
+}
+
+.img1,
+.img2 {
+  flex: 1;
+}
+
+.img1 {
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.img2 {
+  padding: 0;
+}
+
+#port1,
+#port2 {
+  box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.t-row:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.heading {
+  padding: 1rem;
+  text-align: center;
+}
+
+.more {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.container3 {
+  min-height: 100vh;
+  height: auto;
+  padding: 0 1rem;
+}
+
+.packages {
+  min-height: 80vh;
+  height: auto;
+}
+
+.packages h2 {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 300;
+  word-spacing: 5px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-family: "Poppins", sans-serif;
+}
+
+.outerbox {
+  height: auto;
+  margin-top: 4rem;
+}
+
+.row1 {
+  display: flex;
+  gap: 2%;
+  justify-content: center;
+  height: auto;
+  flex-wrap: wrap;
+}
+
+.cont {
+  width: 90%;
+  height: auto;
+  max-width: 1200px;
+}
+
+.cont p {
+  color: #0f0f0f;
+  font-family: "Urbanist", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin: 1rem 0;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  line-height: 1.6;
+}
+
+.container5 {
+  min-height: 90vh;
+  height: auto;
+  padding: 0 1rem;
+}
+
+.t-contact h1 {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 300;
+  word-spacing: 5px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-family: "Poppins", sans-serif;
+}
+
+.rowlast {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  flex-wrap: wrap;
+}
+
+.t-contact .box {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  text-align: left;
+  width: 30%;
+  min-width: 300px;
+  padding: 1rem;
+}
+
+.t-contact .box h2 {
+  text-align: left;
+  margin: 1rem 0;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 300;
+  word-spacing: 5px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-family: "Poppins", sans-serif;
+}
+
+.t-contact .box p {
+  color: #0f0f0f;
+  font-family: "Urbanist", sans-serif;
+  letter-spacing: 1px;
+  margin: 1rem 0;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.book-btn {
+  margin: 1rem 0;
+  background-color: #92e3a9;
+  font-family: "Urbanist", sans-serif;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  padding: 1rem;
+  width: 100%;
+  max-width: 200px;
+}
+
+.book-btn:hover {
+  background-color: #37474f;
+  color: #fff;
+  transition: 0.2s ease;
+}
+
+.contimg {
+  width: 40%;
+  min-width: 300px;
+}
+
+#contimg {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes slideup {
+  0% {
+    transform: translateY(2rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.come-in {
+  transform: translateY(150px);
+  animation: come-in 0.8s ease forwards;
+}
+
+.come-in:nth-child(odd) {
+  animation-duration: 0.6s;
+}
+
+.already-visible {
+  transform: translateY(0);
+  animation: none;
+}
+
+@keyframes come-in {
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Media Queries */
+
+/* Large screens */
+@media screen and (max-width: 1200px) {
+  .t-info .t-row {
+    max-width: 1000px;
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+  
+  .infobox,
+  .images {
+    max-width: 450px;
+  }
+}
+
+/* Large tablets and small desktops */
+@media screen and (max-width: 1024px) {
+  .t-info .t-row {
+    gap: 2rem;
+    padding: 1rem;
+  }
+  
+  .infobox,
+  .images {
+    max-width: 400px;
+  }
+  
+  .t-container .content {
+    width: 70%;
+  }
+}
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+  .t-container {
+    padding: 1rem;
+  }
+  
+  .t-container .content {
+    width: 90%;
+  }
+  
+  .t-info .t-row {
+    flex-direction: column !important;
+    gap: 2rem;
+    padding: 1rem;
+    margin: 2rem auto;
+  }
+  
+  .infobox,
+  .images {
+    width: 100%;
+    max-width: none;
+  }
+  
+  .images {
+    order: -1;
+  }
+  
+  .t-row:nth-child(even) .images {
+    order: 1;
+  }
+  
+  .img1 {
+    margin-top: 0;
+  }
+  
+  .rowlast {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .t-contact .box,
+  .contimg {
+    width: 90%;
+  }
+  
+  .row1 {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+/* Mobile phones */
+@media screen and (max-width: 480px) {
+  .t-container {
+    padding: 0.5rem;
+  }
+  
+  .t-container .content {
+    width: 95%;
+    padding: 1rem;
+  }
+  
+  .t-container .content h2,
+  .t-container .content h3 {
+    letter-spacing: 1px;
+  }
+  
+  .t-container .content p {
+    letter-spacing: 1px;
+  }
+  
+  .t-info {
+    padding: 0 0.5rem;
+  }
+  
+  .t-info .t-row {
+    padding: 0.5rem;
+    margin: 1rem auto;
+  }
+  
+  .box {
+    padding: 1rem;
+  }
+  
+  .images {
+    gap: 0.5rem;
+  }
+  
+  .img1 {
+    padding: 0;
+    margin-top: 0;
+  }
+  
+  .cont {
+    width: 95%;
+  }
+  
+  .container3,
+  .container5 {
+    padding: 0 0.5rem;
+  }
+  
+  .packages h2,
+  .t-contact h1,
+  .t-info h2 {
+    margin: 1rem 0;
+  }
+  
+  .chk-btn,
+  .book-btn {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 320px) {
+  .t-container .content {
+    width: 98%;
+    padding: 0.8rem;
+  }
+  
+  .box {
+    padding: 0.8rem;
+  }
+  
+  .cont {
+    width: 98%;
+  }
+  
+  .t-contact .box,
+  .contimg {
+    width: 95%;
+  }
+}
