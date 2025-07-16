@@ -69,6 +69,11 @@
   font-weight: 500;
 }
 
+.word-no-break {
+  white-space: nowrap;
+  display: inline-block;
+}
+
 .home .video-container {
   width: 100%;
   height: 100%;

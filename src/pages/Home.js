@@ -5,6 +5,9 @@ import { Services } from '../components/Services'
 import { BookSection } from '../components/BookSection'
 import { PackageSection } from '../components/PackageSection'
 import { ContInfo } from '../components/ContInfo'
+import { Gallery } from '../components/Gallery'
+import { Testimonials } from '../components/Testimonials/Testimonials'
+import { Stats } from '../components/Stats/Stats'
 
 export const Home = () => {
   return (
@@ -13,7 +16,7 @@ export const Home = () => {
         <section className="home" id="home">
           <div className="content">
             <h3>
-              Begin your <span id="diff">A</span>dventures with us
+              Begin your <span className="word-no-break">  <span id="diff">A</span>dventures </span> with us
             </h3>
             <p>Find Your Best Holiday In The Jungles Of India</p>
             <Link className="btn" to="/locations">
@@ -58,11 +61,17 @@ export const Home = () => {
       </div>
       <BookSection />
       <hr id="line" />
+      <Stats />
+      <hr id="line" />
       <PackageSection />
+      <hr id="line" />
+      <Gallery isHomePage={true} />
       <hr id="line" />
       <Services />
       <hr id="line" />
       <ContInfo />
+      <hr id="line" />
+      <Testimonials />
       <hr id="line" />
     </>
   )

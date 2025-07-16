@@ -14,7 +14,7 @@ export const Services = () => {
       icon: "fas fa-rupee-sign",
     },
     {
-      header: "Railway Bookings",
+      header: "Taxi Booking",
       info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maioresquis ullam possimus, maxime rerum aspernatur!",
       icon: "fas fa-subway",
     },

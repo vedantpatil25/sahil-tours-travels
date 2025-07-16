@@ -231,13 +231,13 @@
   flex-wrap: wrap;
 }
 
-.cont {
+div.more .cont {
   width: 90%;
   height: auto;
   max-width: 1200px;
 }
 
-.cont p {
+div.more .cont p {
   color: #0f0f0f;
   font-family: "Urbanist", sans-serif;
   letter-spacing: 1px;
@@ -487,8 +487,8 @@
     margin-top: 0;
   }
   
-  .cont {
-    width: 95%;
+  div.more .cont {
+    width: 100%;
   }
   
   .container3,
@@ -520,7 +520,7 @@
     padding: 0.8rem;
   }
   
-  .cont {
+  div.more .cont {
     width: 98%;
   }
   

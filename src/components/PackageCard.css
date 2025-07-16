@@ -60,6 +60,7 @@
 
 .cont {
   padding: 1.5rem;
+  justify-content: center;
   position: relative;
   z-index: 2;
   display: flex;

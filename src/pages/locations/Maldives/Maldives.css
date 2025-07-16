@@ -200,11 +200,11 @@
     flex-wrap: wrap;
   }
   
-  .cont {
+  div.more .cont {
     width: 90%;
     height: auto;
   }
-  .cont p {
+  div.more .cont p {
     color: #0f0f0f;
     font-family: "Urbanist", sans-serif;
     letter-spacing: 1px;

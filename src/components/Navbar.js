@@ -40,6 +40,11 @@ export const Navbar = () => {
             Taxi Service
           </Link>
         </li>
+        <li className="mobile-only">
+          <Link to="/gallery" id="d">
+            Gallery
+          </Link>
+        </li>
 
         {/* Desktop dropdown sections */}
         <li id="drop">
@@ -53,22 +58,22 @@ export const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/locations/europe" id="d">
+              <Link to="/locations/bandhavgarh" id="d">
                 Bandhavgarh National Park
               </Link>
             </li>
             <li>
-              <Link to="/locations/srilanka" id="d">
+              <Link to="/locations/kanha" id="d">
                 Kanha Tiger Reserve
               </Link>
             </li>
             <li>
-              <Link to="/locations/thailand" id="d">
+              <Link to="/locations/pench" id="d">
                 Pench National Park
               </Link>
             </li>
             <li>
-              <Link to="/locations/maldives" id="d">
+              <Link to="/locations/panna" id="d">
                 Panna National Park
               </Link>
             </li>
@@ -79,6 +84,14 @@ export const Navbar = () => {
             </li>
           </ul>
         </li>
+        
+        {/* New Gallery Link */}
+        <li>
+          <Link to="/gallery" id="d">
+            Gallery
+          </Link>
+        </li>
+        
         <li>
           <Link to="/locations" id="d">
             Locations

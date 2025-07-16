@@ -18,7 +18,7 @@ import { Kerala } from './pages/locations/Kerala/Kerala'
 import { Error } from './pages/Error'
 import { Delhi } from './pages/locations/Delhi/Delhi'
 import ScrollToTop from './components/ScrollToTop'
-
+import { Gallery } from './components/Gallery'
 
 function App() {
   return (
@@ -31,6 +31,7 @@ function App() {
           <Route path="/book" element={<Book />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/locations" element={<Locations />} />
+          <Route path="/gallery" element={<Gallery />} />
           <Route path="/locations/dubai" element={<Dubai />} />
           <Route path="/locations/himachal" element={<Himachal />} />
           <Route path="/locations/goa" element={<Goa />} />
