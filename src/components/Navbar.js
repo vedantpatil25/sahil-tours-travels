@@ -40,11 +40,6 @@ export const Navbar = () => {
             Taxi Service
           </Link>
         </li>
-        <li className="mobile-only">
-          <Link to="/gallery" id="d">
-            Gallery
-          </Link>
-        </li>
 
         {/* Desktop dropdown sections */}
         <li id="drop">
